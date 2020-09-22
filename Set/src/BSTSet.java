@@ -1,3 +1,4 @@
+//基于二分搜索树的集合类
 public class BSTSet<E extends Comparable<E>> implements Set<E> {
    private   BST<E> bst;
    public BSTSet(){

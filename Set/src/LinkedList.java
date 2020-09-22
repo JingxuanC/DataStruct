@@ -1,4 +1,4 @@
-public class LinkList<E> {
+public class LinkedList<E> {
     //节点 私有内部类
     private class Node{
         public E e;
@@ -23,7 +23,7 @@ public class LinkList<E> {
     //设置为虚拟头节点
     private Node dummyHead;
     private int size;
-    public LinkList(){
+    public LinkedList(){
         dummyHead=new Node(null,null);
         size=0;
     }
@@ -123,7 +123,24 @@ public class LinkList<E> {
     public E removeLast(){
         return  remove(size-1);
     }
+   //删除任意元素
+    public void removeElement(E e){
+        //从虚头节点开始
+        Node prev=dummyHead;
+        while (prev.next!=null){
+            //找到被删除元素的前一个节点
+            if (prev.next.e.equals(e))
+                break;
+            prev=prev.next;
+        }
+        if (prev.next!=null){
+            //delNOde为即将被删除的节点
+            Node delNode=prev.next;
+            prev.next=delNode.next;
+            delNode.next=null;
+        }
 
+    }
     @Override
     public String toString() {
         StringBuilder res=new StringBuilder();
