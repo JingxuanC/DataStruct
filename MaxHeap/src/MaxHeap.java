@@ -6,6 +6,13 @@ public class MaxHeap <E extends Comparable<E>>{
     public MaxHeap(){
         data=new Array<>();
     }
+    public MaxHeap(E [] arr){
+        data =new Array<>(arr);
+        //从最后一个节点开始
+        for (int i=parent(arr.length-1);i>=0;i--){
+            siftDown(i);
+        }
+    }
     public int size(){
         return data.getSize();
     }
@@ -60,14 +67,12 @@ public class MaxHeap <E extends Comparable<E>>{
     private void siftDown(int k){
         //当前节点的左孩子的索引值小于数组的大小
         //循环到叶子节点
-        //左孩子的索引 小于数组大小？
+        //左孩子的索引 小于数组大小
         while (leftChild(k)<data.getSize()){
             int j=leftChild(k);// 在此轮循环中,data[k]和data[j]交换位置
-            if (j+1<data.getSize()&&
-                    //右孩子大于左孩子
-                    data.get(j+1).compareTo(data.get(j))>0) {
+            if (j+1<data.getSize()&& data.get(j+1).compareTo(data.get(j))>0)
                 j = rightChild(k);//右孩子下标
-            }
+                //j++
             // data[j] 是 leftChild 和 rightChild 中的最大值
             if(data.get(k).compareTo(data.get(j)) >= 0 )
                 break;
@@ -76,4 +81,12 @@ public class MaxHeap <E extends Comparable<E>>{
             k = j;
         }
     }
+    //取出堆中的最大元素，并且替换成元素e
+    public E replace(E e){
+        E ret=findMax();
+        data.set(0,e);
+        siftDown(0);
+        return ret;
+    }
+
 }
