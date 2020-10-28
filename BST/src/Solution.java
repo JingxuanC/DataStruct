@@ -1,4 +1,5 @@
-package PACKAGE_NAME;
-
 public class Solution {
+    public  BST<Integer> insertIntoBST(){
+        return null;
+    }
 }
