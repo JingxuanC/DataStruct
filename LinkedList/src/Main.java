@@ -1,8 +1,12 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Random;
 
 public class Main {
 
     public static void main(String[] args) {
+        Map<Integer, Integer> map =new HashMap<>();
+
     int opCount=100000;
     ArrayStack<Integer> arrayStack=new ArrayStack<>();
     double time1=testStack(arrayStack,opCount);

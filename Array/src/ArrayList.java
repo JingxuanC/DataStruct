@@ -1,4 +1,4 @@
-public class ArrayPlus<E> {
+public class ArrayList<E> {
     private E[] data ;
     private int size;
      //支持泛型
@@ -6,7 +6,7 @@ public class ArrayPlus<E> {
      *构造函数，传入数组的容量 capacity 构造Array
      * @param capacity 容量
      */
-    public ArrayPlus(int capacity){
+    public ArrayList(int capacity){
         data=(E[]) new Object[capacity];
         size=0;
     }
@@ -15,7 +15,7 @@ public class ArrayPlus<E> {
      * capacity： 容量
      * 无参数的构造函数，默认数组的容量capacity=10；
      */
-    public ArrayPlus(){
+    public ArrayList(){
         this(10);
     }
 

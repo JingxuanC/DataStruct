@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 /**
  * 数组最大的优点：快速查询
@@ -6,6 +9,7 @@ public class Main {
 
 
     public static void main(String[] args) {
+        List<Integer> list=new ArrayList<>();
 	//声明一个数组
         int [] arr=new int[10];
         for(int i=0;i<arr.length;i++){
