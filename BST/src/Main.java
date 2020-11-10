@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
 import java.util.Random;
 
@@ -7,6 +8,8 @@ public class Main {
     public static void main(String[] args) {
         BST<Integer> bst=new BST<>();
         List<Integer> list=new ArrayList<>();
+
+        List<Integer> list1=new LinkedList<>();
 
         Random random=new Random();
 //        int[] nums={5,4,3,2,7,6,8,11};

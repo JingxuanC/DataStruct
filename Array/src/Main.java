@@ -1,4 +1,6 @@
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
 import java.util.List;
 
 public class Main {
@@ -9,7 +11,8 @@ public class Main {
 
 
     public static void main(String[] args) {
-        List<Integer> list=new ArrayList<>();
+        ArrayList<Integer> arrayList=new ArrayList<>();
+        List<Integer> list=new LinkedList<>();
 	//声明一个数组
         int [] arr=new int[10];
         for(int i=0;i<arr.length;i++){

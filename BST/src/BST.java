@@ -1,6 +1,4 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+import java.util.*;
 
 public class BST<E extends  Comparable<E>> {
     private class Node{
@@ -145,6 +143,7 @@ public class BST<E extends  Comparable<E>> {
     public void levelOrder(){
         Queue<Node> queue=new LinkedList<>();
         //根节点入队
+        List<Integer> list=new ArrayList<>();
         queue.add(root);
         while (!queue.isEmpty()){
             //当前节点

@@ -36,7 +36,10 @@ public class LinkList<E> {
         return size==0;
     }
 
-    //在链表index位置添加元素e
+    /**
+     *  在链表index位置添加元素e
+     */
+
     public void add(int index,E e){
         if (index<0||index>size)
             throw new IllegalArgumentException("Add Failed,Illegal index");
@@ -46,11 +49,14 @@ public class LinkList<E> {
             for (int i=0;i<index;i++)
                 //prev指向了下一个节点
                 prev=prev.next;
-
+              //1
 //            Node node =new Node(e);
-//            node.next=prev.next;
-//            prev.next=node;
+////            node.next=prev.next;
+//           prev.next=node;
+        //2
             prev.next=new Node(e,prev.next);
+
+            //1和2 是等价的
             size++;
 
     }

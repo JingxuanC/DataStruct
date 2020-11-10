@@ -64,7 +64,7 @@ public class ArrayList<E> {
             throw new IllegalArgumentException("AddLast failed.Require index >=0 and index<=size");
 
         //元素后移
-        for (int i=size-1;i>=size;i--){
+        for (int i=size-1;i>=index;i--){
             data[i+1]=data[i];
         }
         data[index]=e;
